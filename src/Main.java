@@ -19,12 +19,26 @@ public class Main {
         int nouvelleVitesse=voitureDuWeekEnd.accelerer(50);
         System.out.println("La nouvelle vitesse avec accéléré surchargé est de : "+nouvelleVitesse);
 
-        Voiture voitureDeSemaine=new Voiture();
+        Voiture voitureDeSemaine=new Voiture("Jaune", 5);
         boolean egauxOuNon= voitureDuWeekEnd.equals(voitureDeSemaine);
         System.out.println("égale ? "+egauxOuNon);
+        Moteur moteur=new Moteur();
+        moteur.carburation="Essence";
+        moteur.nbCylindres=6;
+        voitureDeSemaine.moteur=moteur;
+        System.out.println("La voiture pour rouler en semaine à un moteur de "+voitureDeSemaine.moteur.nbCylindres+" cylindres et de couleur "+voitureDeSemaine.couleur);
+        System.out.println("Le nombre de roue de la voiture est "+Voiture.nbRoues);
 
-        //if(voitureDeSemaine.couleur==null){
-          //  System.out.println("Couleur de la voiture null");
-        //}
+        Passager passager=new Passager();
+        passager.nom="Durant";
+        passager.prenom="Jean";
+
+        Ville lyon=new Ville();
+        lyon.nom="Lyon";
+
+        Ville destination=voitureDeSemaine.transport(passager, lyon);
+        System.out.println(passager.prenom+" est arrivé dans la ville de "+destination.nom);
+
+        Voiture newVoiture=new Voiture("Verte",5);
     }
 }
