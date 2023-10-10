@@ -1,15 +1,13 @@
-public class Voiture {
+public class Voiture extends VehiculeAMoteur implements Vidangeable{
     static int nbRoues=4;
     int nbPortes=5;
     boolean automatique;
     String couleur;
     char permiereLettrePlaque;
     int rapportCourant;
-    int vitesse;
-
-    Moteur moteur;
 
     Voiture(){
+        super();
         System.out.println("Une voiture est construite sans paramètres");
     }
     Voiture(String couleur, int nbPortes){// Instancier plusieurs constructeurs à une même classe n'est possible qu'en utilisant qu'une seule nature de paramètre
@@ -44,15 +42,6 @@ public class Voiture {
         }
         System.out.println("La voiture va tourner à "+droiteOuGauche+" d'un angle de "+angle);
     }
-    int accelerer(){
-        System.out.println("J'accelère à ");
-        return 100;
-    }
-    int accelerer(int vitesse){
-        System.out.println("J'accelère à ");
-        this.vitesse=this.vitesse+vitesse;// ajoute la valeur initial + valeur ajouter en parametre sans this qui permet de differencié la propriété initial et le parametre
-        return vitesse;
-    }
     int passerRapport(boolean augmenter){
         if(augmenter){
             rapportCourant++;
@@ -61,13 +50,9 @@ public class Voiture {
         }
         return rapportCourant;
     }
-    Ville transport(Passager passager, Ville villeDeDepart){
-        System.out.println("Je transporte un passager qui s'appel "+passager.prenom+" "+passager.nom);
-        System.out.println(passager.prenom+" est parti de la ville de "+villeDeDepart.nom);
 
-        Ville villeDeDestination=new Ville();
-        villeDeDestination.nom="Marseille";
-
-        return villeDeDestination;
+    @Override
+    public void vidanger() {
+        System.out.println("Dévisser le bouchon sous la culasse pour que ça coule");
     }
 }

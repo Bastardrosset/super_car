@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
         Voiture voitureDuWeekEnd=new Voiture();
         voitureDuWeekEnd.nbPortes=3;
         voitureDuWeekEnd.automatique=true;
@@ -40,5 +41,15 @@ public class Main {
         System.out.println(passager.prenom+" est arrivé dans la ville de "+destination.nom);
 
         Voiture newVoiture=new Voiture("Verte",5);
+
+        // Transtypage
+        Voiture newVoitureSousFormeDeVoiture=(Voiture)voitureDeSemaine;
+        newVoitureSousFormeDeVoiture.automatique=true;
+        // ou
+        ((Voiture)voitureDeSemaine).automatique=true;
+
+        // Vehicule à moteur
+        UsineDAssemblageVoiture ua=new UsineDAssemblageVoiture();
+        Voiture v=ua.assemble();
     }
 }
