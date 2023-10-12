@@ -10,15 +10,15 @@ public class Main {
 
         voitureDuWeekEnd.klaxonner();
         //System.out.println(voitureDuWeekEnd.accelerer());
-        System.out.println("La nouvelle vitesse de la voiture est "+voitureDuWeekEnd.accelerer()+" km/h");
+        //System.out.println("La nouvelle vitesse de la voiture est "+voitureDuWeekEnd.accelerer()+" km/h");
 
         int nouveauRapport=voitureDuWeekEnd.passerRapport(true);
         System.out.println("Le nouveau rapport est "+nouveauRapport);
 
         voitureDuWeekEnd.tourner(false, 90);
 
-        int nouvelleVitesse=voitureDuWeekEnd.accelerer(50);
-        System.out.println("La nouvelle vitesse avec accéléré surchargé est de : "+nouvelleVitesse);
+        //int nouvelleVitesse=voitureDuWeekEnd.accelerer(50);
+        //System.out.println("La nouvelle vitesse avec accéléré surchargé est de : "+nouvelleVitesse);
 
         Voiture voitureDeSemaine=new Voiture("Jaune", 5);
         boolean egauxOuNon= voitureDuWeekEnd.equals(voitureDeSemaine);
@@ -26,8 +26,8 @@ public class Main {
         Moteur moteur=new Moteur();
         moteur.carburation="Essence";
         moteur.nbCylindres=6;
-        voitureDeSemaine.moteur=moteur;
-        System.out.println("La voiture pour rouler en semaine à un moteur de "+voitureDeSemaine.moteur.nbCylindres+" cylindres et de couleur "+voitureDeSemaine.couleur);
+        //voitureDeSemaine.moteur=moteur;
+        //System.out.println("La voiture pour rouler en semaine à un moteur de "+voitureDeSemaine.moteur.nbCylindres+" cylindres et de couleur "+voitureDeSemaine.couleur);
         System.out.println("Le nombre de roue de la voiture est "+Voiture.nbRoues);
 
         Passager passager=new Passager();
@@ -37,8 +37,8 @@ public class Main {
         Ville lyon=new Ville();
         lyon.nom="Lyon";
 
-        Ville destination=voitureDeSemaine.transport(passager, lyon);
-        System.out.println(passager.prenom+" est arrivé dans la ville de "+destination.nom);
+        //Ville destination=voitureDeSemaine.transport(passager, lyon);
+        //System.out.println(passager.prenom+" est arrivé dans la ville de "+destination.nom);
 
         Voiture newVoiture=new Voiture("Verte",5);
 
@@ -50,6 +50,13 @@ public class Main {
 
         // Vehicule à moteur
         UsineDAssemblageVoiture ua=new UsineDAssemblageVoiture();
-        Voiture v=ua.assemble();
+        //Voiture v=ua.assemble();
+
+        Voiture peugeot208=new Voiture();
+        //VehiculeAMoteur peugeot207=new Voiture();
+        Vidangeable peugeot205=new Voiture();
+
+        Velo superBike=new Velo();
+        superBike.Klaxonner();
     }
 }

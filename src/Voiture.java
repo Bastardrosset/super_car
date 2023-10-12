@@ -1,4 +1,4 @@
-public class Voiture extends VehiculeAMoteur implements Vidangeable{
+public class Voiture extends Vehicule implements Vidangeable{
     static int nbRoues=4;
     int nbPortes=5;
     boolean automatique;
@@ -19,10 +19,10 @@ public class Voiture extends VehiculeAMoteur implements Vidangeable{
         //this.nbPortes=nbPortes;
         //System.out.println("Une voiture possède "+nbPortes+" portes");
     //}
-    Voiture(Moteur moteur){
-        this.moteur=moteur;
-        System.out.println("Une nouvelle voiture est construite avec un moteur");
-    }
+    //Voiture(Moteur moteur){
+        //this.moteur=moteur;
+        //System.out.println("Une nouvelle voiture est construite avec un moteur");
+    //}
     //Voiture(String carburation, int nbCylindres){
         //Moteur moteur=new Moteur();
         //moteur.carburation=carburation;
@@ -30,9 +30,9 @@ public class Voiture extends VehiculeAMoteur implements Vidangeable{
         //this.moteur=moteur;
         //System.out.println("Une nouvelle voiture est construite avec des paramètres moteur");
     //}
-    static void klaxonner(){
-        System.out.println("tututee");
-    }
+    //static void klaxonner(){
+        //System.out.println("tututee");
+    //}
     static void tourner(boolean droite, int angle){
         String  droiteOuGauche=null;
         if(droite){
@@ -54,5 +54,10 @@ public class Voiture extends VehiculeAMoteur implements Vidangeable{
     @Override
     public void vidanger() {
         System.out.println("Dévisser le bouchon sous la culasse pour que ça coule");
+    }
+
+
+    public void klaxonner() {
+        System.out.println("Tute tutee !");
     }
 }
