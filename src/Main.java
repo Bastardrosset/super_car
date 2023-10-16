@@ -56,6 +56,24 @@ public class Main {
         //VehiculeAMoteur peugeot207=new Voiture();
         Vidangeable peugeot205=new Voiture();
 
+        Voiture peugeot206=new Voiture();
+        peugeot206.typeBoite=TypeBoiteVitesse.SEMI_AUTOMATIQUE;
+
+        System.out.println("Le type de la boite a vitesse de la peugeot 206 est "+peugeot206.typeBoite.nomTypeBoite);
+        System.out.println(peugeot206.typeBoite.ordinal());// Ordinal() permet de retourner la valeur numérique de l'énumerateur
+
+        //switch (peugeot206.typeBoite){
+            //case ROBOT:
+                //System.out.println("La boite est robotisé");
+                //break;
+            //case SEMI_AUTOMATIQUE:
+                //System.out.println("La boite est semi automatique");
+                //break;
+            //case MANUELLE:
+                //System.out.println("La boite est manuelle");
+                //break;
+        //}
+
         Velo superBike=new Velo();
         superBike.Klaxonner();
     }
