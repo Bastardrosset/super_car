@@ -52,6 +52,21 @@ public class Voiture extends Vehicule implements Vidangeable{
         return rapportCourant;
     }
 
+    Ville transport(Passager passager, Ville villeDeDepart, Ville... villeEtapes){
+        System.out.println("Je transporte un passager qui s'appel "+passager.prenom+" "+passager.nom);
+        System.out.println(passager.prenom+" est parti de la ville de "+villeDeDepart.nom);
+        System.out.println("La premiere ville etape est "+villeEtapes[0].nom);
+        System.out.println("La deuxième ville etape est "+villeEtapes[1].nom);
+        System.out.println("La troisième ville etape est "+villeEtapes[2].nom);
+        System.out.println("La quatrième ville etape est "+villeEtapes[3].nom);
+        System.out.println("Il y a "+villeEtapes.length+" villes étapes");
+
+        Ville villeDeDestination=new Ville();
+        villeDeDestination.nom="Marseille";
+
+        return villeDeDestination;
+    }
+
     @Override
     public void vidanger() {
         System.out.println("Dévisser le bouchon sous la culasse pour que ça coule");

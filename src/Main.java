@@ -58,6 +58,7 @@ public class Main {
 
         Voiture peugeot206=new Voiture();
         peugeot206.typeBoite=TypeBoiteVitesse.SEMI_AUTOMATIQUE;
+        peugeot206.couleur="rouge";
 
         System.out.println("Le type de la boite a vitesse de la peugeot 206 est "+peugeot206.typeBoite.nomTypeBoite);
         System.out.println(peugeot206.typeBoite.ordinal());// Ordinal() permet de retourner la valeur numérique de l'énumerateur
@@ -76,5 +77,35 @@ public class Main {
 
         Velo superBike=new Velo();
         superBike.Klaxonner();
+
+        Voiture[] tableauVoiture=new Voiture[10];
+        tableauVoiture[0]=peugeot206;
+        System.out.println("La 206 est "+tableauVoiture[0].couleur);
+
+        Passager passager2=new Passager();
+        passager2.nom="Dupond";
+        passager2.prenom="Michel";
+        Ville depart=new Ville();
+        depart.nom="Paris";
+
+        Ville etape1= new Ville();
+        etape1.nom="Reims";
+
+        Ville etape2= new Ville();
+        etape2.nom="Strasbourg";
+
+        Ville etape3= new Ville();
+        etape3.nom="Grenoble";
+
+        Ville etape4= new Ville();
+        etape4.nom="Privas";
+
+        Ville[] villeEtapes=new Ville[4];
+        villeEtapes[0]=etape1;
+        villeEtapes[1]=etape2;
+        villeEtapes[2]=etape3;
+        villeEtapes[3]=etape4;
+
+        peugeot206.transport(passager, depart, villeEtapes);
     }
 }
